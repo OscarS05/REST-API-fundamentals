@@ -2,7 +2,7 @@
 // The API_KEY should be handled in the backend. Since this project is only for practicing REST requests without a backend, it is exposed here as an exception.
 //If you want to test the code go to the cat api link, log in and they will send you your API_KEY to the email, you just have to replace the API_KEY in this js file
 // The cat api: https://developers.thecatapi.com/view-account/ylX4blBYT9FaoVd6OhvR?report=FJkYOq9tW
-const API_KEY = 'Copy your API_KEY_';
+const API_KEY = 'Copy your API_KEY';
 const X_API_KEY = 'Copy your X_API_KEY';
 const RANDOM_CATS_API = 'https://api.thecatapi.com/v1/images/search';
 const FAVOURITE_CATS_API = `https://api.thecatapi.com/v1/favourites`;
@@ -35,8 +35,8 @@ async function loadRandomCats(){
         errorNotice.innerHTML = `There was an error: ${response.status}, ${data.message}`;
     }
 
-    const images = document.querySelectorAll('img');
-    images.forEach(async (img, i) => {
+    const images = document.querySelectorAll('.random-cat-img');
+    images.forEach((img, i) => {
         //This error that appears here in the console does not generate any problem in the code
         img.src = data[i].url;
         img.id = data[i].id;
