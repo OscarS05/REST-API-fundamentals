@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random cats</title>
+</head>
+<body>    
+    <h1>Cats app</h1>
+    <span id="error"></span>
+
+    <section id="randomCatsSection">
+        <h2>Random cats</h2>
+
+        <article>
+            <img width="250px" alt="random-cat-img">
+            <button class="save-cat-button">Save cat in favorites</button>
+        </article>
+        
+        <article>
+            <img width="250px" alt="random-cat-img">
+            <button class="save-cat-button">Save cat in favorites</button>
+        </article>
+        
+        <button id="showCat">Show me a cat</button>
+    </section>
+
+    <section id="uploadingCat">
+        <h2>Upload your cat's photo</h2>
+
+        <form id="uploadingForm">
+            <input type="file" id="file" name="file">
+            <div class="thumbnail-container">
+                <img class="thumbnail-photo" width="80px" alt="photo-cat">
+            </div>
+            <button class="button-to-upload-photo" type="button">Upload photo</button>
+        </form>
+    </section>
+
+    <section id="favoriteCatsSection">
+        <!-- Here, h2 + article + cat img + remove cat button -->
+    </section>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
